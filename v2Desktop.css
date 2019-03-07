@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("css/animate.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css");
 @import url("blob.css");
 /* ANIMATIONS*/
 @-webkit-keyframes fadeInDown {
