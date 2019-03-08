@@ -4,8 +4,9 @@
 	
 @media only screen and (max-width: 500px){
 body{
-	padding-right:0 !important;
-	margin-right:0;
+	overflow: hidden;
+	padding:0 ;
+	margin:0;
 }
 	#loader
 	{
@@ -52,14 +53,13 @@ header {
 }
 
 .works{
-	padding-right:0 !important;
+	padding:0 !t;
 	height: 80vh;
 	display: grid;
-	margin: 4% 4%  0 4%;
+	margin: 10vw;
 	grid-template-rows: 40vw 40vw 40vw ;
 	grid-template-columns: 40vw 40vw;
-	grid-column-gap: 2%;
-	grid-row-gap: 2vh;
+
 	grid-template-areas: 	
 	"artBtn blank1 "
 	"	blank2 projBtn"
@@ -68,13 +68,14 @@ header {
 }
 .card{
 	padding: 2%;
+	font-style:normal;
 	margin:0;
 	width:40vw;
 	height:40vw;
 	padding:40% 5% 40% 5%;
 	line-height: 1.3em;
 	text-align: center;
-	font-size: 1em;
+	font-size: 18px;
 	white-space: normal;
 }
 
@@ -104,7 +105,7 @@ header {
 }
  #intro .column h3{
 	color: white;
-	line-height:  1200px;
+	line-height:  200px;
 	margin:0;
 	font-size: 5vw;
 
