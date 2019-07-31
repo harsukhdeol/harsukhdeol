@@ -1,0 +1,538 @@
+/* v3 css mobile*/
+@charset "UTF-8";
+@import url("css/animate.css");
+@import url("blob.css");
+
+/* ANIMATIONS*/
+@-webkit-keyframes fadeInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -25%, 0);
+      transform: translate3d(0, -25%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -25%, 0);
+      transform: translate3d(0, -25%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+  }
+  
+@-webkit-keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+  }
+	
+.typewriter h2{
+		font-weight: bold;
+		overflow: hidden; /* Ensures the content is not revealed until the animation */
+		border-right: .15em solid #842fed; /* The typwriter cursor */
+		white-space: nowrap; /* Keeps the content on a single line */
+		margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+		letter-spacing: 0.1em;
+		animation: 
+			typing 2s 4s steps(8, end),
+			blink-caret .75s step-end infinite;
+	}
+	
+	/* The typing effect */
+	@keyframes typing {
+		from { width: 0 }
+		to { width: 100% }
+	}
+
+	/* The typewriter cursor effect */
+	@keyframes blink-caret {
+		from, to { border-color: transparent }
+		50% { border-color: #842fed; }
+	}
+
+
+body {
+	font-family: 'Calibri';
+	background-color: white;
+	transition: all 1s ease-in;
+	text-align: justify;
+	overflow: scroll;
+
+}
+
+
+
+#loader
+{
+    z-index:1001;
+    position:fixed;
+    left:42vw;
+    top:42vh;
+    content: '';
+    display: block;
+    width: 16vw;
+    height: 16vw;
+    min-height: 5vw;
+    min-width: 5vw;
+}
+
+
+.fade{
+	animation: fadeInDown 1s 3s 1 ease-in-out normal;
+}
+/* Header */
+.header {
+	display : inline-block;
+	font-family:'Gill Sans MT';
+	background: url( "1.jpg") center center no-repeat;
+	background-size: cover;
+	color: #fff;
+	text-align: center;
+		 height: 100%;
+		 width:100%;
+	font-size: 18px;
+	
+}
+.header h4{	
+	color: #fff;
+	text-align: center;
+	padding-top:10%;
+}
+
+.logo{
+	margin:30% 20% 30% 20%;
+	display: inline-block;
+}
+
+/* Intro Section*/
+.intro{
+	
+    width: 100%;
+		background-color: black;
+		color: white;
+}
+.intro h2{
+	font-family:'Gill Sans MT';
+		font-style: italic;
+		text-align: center;
+		padding: 20% 8% 5% 8%;
+		font-size: 28px;
+}
+.highlight{
+    background-color: #972fed;
+}
+.intro p{
+	margin: 0 15% 0 15%;
+	padding-bottom: 50px;
+	text-align: center;
+
+
+}
+.scroll{
+	font-size: 10px;
+	text-align: center;
+	
+}
+.arrow{
+	transform: rotate(90deg);
+	display: inline-block;
+	margin: 15px 47vw;
+
+}
+.panes{
+	font-family:'Gill Sans MT';
+	letter-spacing: 0.3em;
+	margin-top: 10px;
+		background-color: black;
+		text-align: center;
+		color: white;
+    height: 40vh;
+		width:100%;
+		font-size: 24px;
+		line-height: 35px;
+		padding: 25% ;
+}
+.text{
+		margin: 10% 0;
+		height: 600px;
+		
+
+}
+.text p{
+	margin: 10% 20% 10% 20%;
+}
+.container , .row ,.col-sm-12{
+	padding: 0;
+	margin:0;
+}
+.slide{
+	overflow:auto;
+	white-space:nowrap;
+	margin: 0 10vw;
+}
+.slideimg{
+	display: inline-block;
+	background-color: black;
+	margin: 0 5%;
+	height: 80vw;
+}
+h4{
+	text-align: right;
+	font-size: 12pt;
+	padding: 10px 0; 
+}
+
+.profile {
+	grid-area: profile;
+	object-fit: cover;
+	margin: 0 25% 0;
+	width:50%;
+	padding: 1em;
+
+}
+
+
+
+
+#projects{
+	display: grid;
+	height: 2200px;
+	grid-row-gap: 20px;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-areas:	
+	"pic1 ""pic2"" pic3 ""pic4 ""pic5"" pic6"" pic7"" pic8 ""pic9";
+	
+	justify-items: center;
+}
+.box{
+	margin:0;
+	width:200px;
+	height:200px;
+	text-align: center;
+	color:white;
+	font-size: 1.5em;
+}
+
+#pic1{
+	grid-area: pic1;
+	background: url( "projects/mag.jpg") center center no-repeat;
+	background-size: auto 60vw;
+}
+#pic1:hover{
+	background-color: black;
+
+}
+#pic2{
+	grid-area: pic2;
+	background: url( "projects/Title.jpg") center center no-repeat;
+	background-size:  60vw auto;
+}
+#pic3{
+	grid-area: pic3;
+	background: url( "projects/code.jpg") center center no-repeat;
+	background-size: auto 60vw;
+}
+#pic4{
+	grid-area: pic4;
+	background: url( "../web/ui/landing.jpg") center center no-repeat;
+	background-size: auto 60vw;
+}
+
+#pic5{
+	background: url( "projects/pottermore.jpg") center center no-repeat;
+	grid-area: pic5;
+	background-size: 60vw auto; 
+	
+}
+#pic6{
+	grid-area: pic6;
+	background: url( "projects/calc.png") center center no-repeat;
+	background-size:  60vw auto;
+}
+#pic7{
+	background: url( "../web/ui/checkout.jpg") center center no-repeat;
+	grid-area: pic7;	 
+	background-size: auto 60vw;
+}
+#pic8{
+	background: url( "projects/cherry.jpg") center center no-repeat;
+	grid-area: pic8;
+	background-size: auto 60vw;
+}
+#pic9{
+	background: url( "projects/q1.jpg") center center no-repeat;
+	grid-area: pic9;	
+	background-size: auto 60vw;
+}
+
+
+footer {
+	display: grid;
+	padding-top: 2em;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 3fr 1fr;
+	grid-template-areas: "title""btn""footer";
+	background-color:black;
+	justify-content: center;
+	animation: fadeInUp 2s 15s 1 ease-in-out normal;/* on scroll in future*/
+}
+footer h3 {
+	grid-area: title;
+	letter-spacing: 0.3em;
+	font-size: 20px;
+	padding: 30px 0  0 ;
+	color: white;
+	align-self: center;
+	text-align: center;
+}
+.blob{
+	grid-area: btn;
+	height: 200px;
+	width: 200px;
+	justify-self: center;	
+	margin: 30px 0 50px 0;
+}
+a{
+	text-decoration:none;
+	color: #FFFFFF;
+}
+.button {
+	justify-self: center;
+	grid-area: btn;
+	z-index: 2;
+	background: transparent; 
+	text-decoration:none;
+	width: 200px;
+	height: 70px;
+	padding:20px 0 20px 0;
+	margin-top: 15vh;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 3px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	border: 3px solid #FFFFFF;
+	color: #FFFFFF;
+	transition: all 0.3s linear;
+	}
+	.icons{
+		grid-area: btn;
+		padding: 50px 35vw;
+	
+	}
+	.icons img{
+		width: 7vw;
+		height: auto;
+		padding: 10px;
+	}
+.copyright {
+	grid-area:footer;
+	text-align: center;
+	margin: 0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background: linear-gradient(to right, #2254b7 0%,#842fed 52%,#e27bf7 100%); 
+	color: #FFFFFF;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	border-top-width: 2px;
+}
+/* ---- SCROLLBAR ----*/
+/* width */
+::-webkit-scrollbar{
+	display: none;
+}
+
+/*--------TABLETS---------*/
+@media (min-width: 700px){
+	.intro{
+		height: 500px;
+	}
+.intro h2{
+	font-size:58px;
+}
+body{
+	font-size: 18px;
+}
+.scroll{
+	font-size: 12px;
+}
+.arrow{
+	margin: 10px 49vw;
+	display: inline-block;
+
+}
+.panes{
+	font-size: 42px;
+	line-height: 60px;
+	height: auto;
+	padding: 20% 0 ;
+}
+.text{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.slideimg{
+	height: 300px;
+}
+#projects{
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	
+	grid-template-areas:	
+	"pic1 pic2 pic3 "
+	"pic4 pic5 pic6"
+	" pic7 pic8 pic9";
+	height: auto;
+	margin:10vh auto;
+}
+
+#pic1{
+background-size: auto 200px;
+}
+#pic2{
+
+	background-size:  200px auto;
+}
+#pic3{
+	background-size: auto 200px;
+}
+#pic4{
+background-size: auto 200px;
+}
+
+#pic5{
+	background-size: 200px auto; 
+	
+}
+#pic6{
+	background-size:  200px auto;
+}
+#pic7{
+	background-size: auto 200px;
+}
+#pic8{
+
+	background-size: auto 300px;
+}
+#pic9{
+	background-size: auto 200px;
+}
+.profile{
+	width: 20%;
+	margin:  0 40% 5% 40% ;
+
+}
+#about .text{
+	height: 100%;
+}
+#about p{
+	margin: 20px 20%;
+}
+footer h3{
+	font-size: 28px;
+}
+}
+/*------DESKTOP-------- */ 
+@media (min-width: 1024px){
+	.profile{
+		margin: 5% 40% 0% 40%;
+	}
+	#about p{
+		margin: 40px 20%;
+	}
+	body{
+		font-size: 20px;
+	}
+	.intro{
+		height: 620px;
+	}
+	.scroll{
+		font-size: 14px;
+	}
+	.slide{
+		margin: 0;
+	}
+	.text p{
+		margin: 10% 0 ;
+	}
+	.box{
+		width: 300px;
+		height: 300px;
+	}
+	#pic1{
+		background-size: auto 300px;
+		}
+		#pic2{
+		
+			background-size:  300px auto;
+		}
+		#pic3{
+			background-size: auto 300px;
+		}
+		#pic4{
+		background-size: auto 300px;
+		}
+		
+		#pic5{
+			background-size: 300px auto; 
+			
+		}
+		#pic6{
+			background-size:  300px auto;
+		}
+		#pic7{
+			background-size: auto 300px;
+		}
+		#pic8{
+		
+			background-size: auto 300px;
+		}
+		#pic9{
+			background-size: auto 300px;
+		}
+}
